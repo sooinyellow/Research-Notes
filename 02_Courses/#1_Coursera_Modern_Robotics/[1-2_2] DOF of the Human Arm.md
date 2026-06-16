@@ -1,3 +1,5 @@
+# [1-2_1] DOF of the Human Arm
+
 # 목표
 
 1. 인간 팔의 DOF 이해하기
