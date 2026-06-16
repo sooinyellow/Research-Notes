@@ -126,6 +126,54 @@
 
 <br>
 
+## 문제
+
+1. Two rigid bodies are connected by a joint. Each rigid body has \(m\) DOF, and the joint has \(f\) DOF.  
+   How many constraints does the joint place on the motion of one rigid body relative to the other?
+
+   **Answer:**  
+   \[
+   constraints = m - f
+   \]
+
+2. Consider a mechanism consisting of three spatial rigid bodies including the ground, \(N = 4\), and four joints: one revolute, one prismatic, one universal, and one spherical.  
+   How many degrees of freedom does the mechanism have?
+
+   **Grubler's formula:**  
+   \[
+   DOF = 6(N - 1 - J) + \sum f_i
+   \]
+
+   \[
+   DOF = 6(4 - 1 - 4) + (1 + 1 + 2 + 3)
+   \]
+
+   \[
+   DOF = -6 + 7 = 1
+   \]
+
+   **Answer:**  
+   \[
+   DOF = 1
+   \]
+
+   항상 ground를 포함해서 \(N\)을 계산해야 한다.
+
+3. A mechanism that is incapable of motion has zero DOF.  
+   In some circumstances, Grubler's formula indicates that the number of degrees of freedom of a mechanism is negative.  
+   How should that result be interpreted?
+
+   **Answer:**  
+   Negative DOF does not mean that the mechanism has a physically negative degree of freedom.  
+   It usually means that the mechanism is **overconstrained**.
+
+   즉, 과도하게 제약되어 있어서 모든 제약조건이 독립적이지 않을 수 있다.  
+   실제 DOF는 음수가 아니라 0으로 해석한다.
+   (솔리드웍스에서 했던 것!)
+
+<br>
+
+
 ## 요약
 
 1. 강체는 6개의 자유도(3개의 이동 + 3개의 회전)를 가진다.
