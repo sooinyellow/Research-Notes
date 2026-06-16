@@ -6,7 +6,7 @@
 - 구성 공간(C-Space) 이해하기
 - 자유도(DOF) 이해하기
 
----
+
 
 ## 구성(Configuration)이란?
 
