@@ -10,7 +10,7 @@
 
 <img width="569" height="1000" alt="image" src="https://github.com/user-attachments/assets/40b5077f-2337-4b06-b68d-67bc8f11eb95" />
 
-인간의 팔은 크게 다음과 같이 모델링할 수 있다.
+인간의 팔은 크게 다음과 같은 rigid bodies를 가지게 된다.
 
 - Ground
 - Humerus
@@ -46,7 +46,9 @@
 
 손바닥을 위로 향하게 하거나 아래로 향하게 할 수 있다.
 
-이 움직임은 손목이 아니라 Radius와 Ulna의 상대 회전에 의해 발생한다.
+이 움직임은 손목이 아니라, Radius와 Ulna의 상대 회전에 의해 발생한다.
+
+(정말 손목을 잡고 돌리니까 돌려진다!)
 
 이를 Pronation / Supination이라고 한다.
 
@@ -58,7 +60,7 @@
 
 손목은 위아래, 좌우 방향으로 움직일 수 있다.
 
-기구학적으로는 Universal Joint로 모델링한다.
+기구학적으로는 Universal Joint로 본다!
 
 - 자유도 = 2
 
@@ -87,7 +89,7 @@
 
 <br>
 
-## Grubler 공식으로 확인
+## Grubler 공식
 
 \[
 DOF = 6(N-1-J)+\sum f_i
