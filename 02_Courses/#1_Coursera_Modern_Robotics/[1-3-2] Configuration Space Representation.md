@@ -27,7 +27,7 @@ Sphere은 2차원이므로 위도와 경도만 사용한다.
 
 여기서 장점과 단점이 생긴다!
 
-- 장점: 최소 개수의 좌표만 사용한다.
+- 장점: 최소 개수의 좌표만 사용한다. 효율적이다!
 - 단점: 특이점과 불연속이 생길 수 있다.
 
 <br>
@@ -75,14 +75,67 @@ Sphere을 예를 들면,
 
 <br>
 
+이로서 Singularity(특이점)이 사라진다.
+
+<br>
+
+
 # Embedded Space
 
 공(Ball)은 그 안의 내부까지 포함한다.
 
 구의 표면(Sphere)은 껍데기만 포함한다.
 
-따
+따라서 구표면은 2차원이다.
+
+하지만 3차원 유클리드 공간 안에 존재한다.
+
+(구 표면이 3차원 공간 안에 들어있다는 것이다)
+
+S^2가 R^3에 embedded 되었다고 말한다!
+
+<br>
+
+Embedded Space를 사용하면
+
+원래 공간보다 더 높은 차원의 좌표계를 사용할 수 있으며,
+
+Implicit Representation이 가능해진다.
+
+<br>
+
+# Rotation Matrix
+
+강체의 자세(Orientation)는 곡면 공간(Curved Space)이다.
+
+<br>
+
+따라서 Euler Angle과 같은 Explicit Representation을 사용하면
+
+Gimbal Lock이라는 특이점이 발생할 수 있다.
+
+<br>
+
+Modern Robotics에서는 특이점을 피하기 위해 Rotation Matrix를 사용한다.
+
+Rotation Matrix는 9개의 원소를 사용하지만
+
+직교성(orthogonality)과 행렬식(det=1) 이라는 Constraint를 가진다.
+
+즉,
+
+Rotation Matrix는 Orientation Space를 표현하기 위한 대표적인 Implicit Representation이다.
+
+<br>
 
 
 
+# 요약
 
+1. 공간 자체(Topology)와 좌표 표현(Coordinates)은 다르다.
+2. Explicit Representation은 최소 좌표를 사용한다.
+3. Explicit Representation은 Singularity와 Discontinuity가 발생할 수 있다.
+4. Implicit Representation은 더 많은 좌표와 Constraint를 사용한다.
+5. Embedded Space는 낮은 차원의 공간을 더 높은 차원 공간 안에서 표현하는 방법이다.
+6. Rotation Matrix는 Orientation을 표현하기 위한 Implicit Representation이다.
+7. Modern Robotics는 특이점을 피하기 위해 Rotation Matrix를 사용한다.
